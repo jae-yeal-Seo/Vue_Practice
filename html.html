@@ -12,6 +12,7 @@
     <div id="app-7">
         <ol>
             <todo-item v-for="item in grocerylist" v-bind:todo="item" v-bind:key="item.id"></todo-item>
+            <supply-item v-for="supply in supplylist" v-bind:supplyitem="supply" v-bind:key="supply.id"></supply-item>
         </ol>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
