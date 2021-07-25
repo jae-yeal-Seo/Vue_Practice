@@ -9,7 +9,7 @@
 
 Vue.component('supply-item',{
     props:['supplyitem'],
-    template:'<li v-for="supply in supplylist" v-bind:supplyitem="supply" v-bind:key="supply.id">{{supply.text}}</li>',
+    template:'<div><li v-for="supply in supplylist" v-bind:supplyitem="supply" v-bind:key="supply.id">{{supply.text}}</li></div>',
     data(){
         return{
             supplylist:[
