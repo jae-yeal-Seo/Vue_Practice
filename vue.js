@@ -17,7 +17,6 @@ Vue.component('supply-item',{
                 {id:'2', text:'seconde'},
                 {id:'3', text:'third'}
             ],
-            forerror:'whaterror'
         } 
     }
 
