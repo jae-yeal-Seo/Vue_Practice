@@ -9,15 +9,17 @@
 </head>
 
 <body>
-    <div id="app-7">
-        <ol>
-            <!-- <todo-item></todo-item> -->
-            <supply-item></supply-item>
-            <!-- <todo-item v-for="item in grocerylist" v-bind:todo="item" v-bind:key="item.id"></todo-item>
-            <supply-item v-for="supply in supplylist" v-bind:supplyitem="supply" v-bind:key="supply.id"></supply-item> -->
-        </ol>
+    <div id="app">
+        <div v-for="(value,name) in user">
+            <p>{{ name }} - {{ value }}</p>
+        </div>
+        <div v-for="user in users">
+            <div v-for="(value,name) in user">
+                <p>{{ name }}-{{ value }}</p>
+            </div>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="./vue.js"></script>
 </body>
 

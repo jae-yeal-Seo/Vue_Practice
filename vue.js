@@ -1,32 +1,15 @@
-// Vue.component('todo-item',{
-//     props:['todo'],
-//     template:`
-//     <div>
-//     <li v-for="item in grocerylist" v-bind:todo="item" v-bind:key="item.id">{{todo.text}}</li>
-//     </div>
-//     `
-// })
-
-Vue.component('supply-item',{
-    props:['supplyitem'],
-    template:'<div><li v-for="supply in supplylist" v-bind:supplyitem="supply" v-bind:key="supply.id">{{supply.text}}</li></div>',
-    data(){
-        return{
-            supplylist:[
-                {id:'1', text:'first'},
-                {id:'2', text:'seconde'},
-                {id:'3', text:'third'}
-            ],
-        } 
-    }
-
-})
-
 let app = new Vue({
-    el:'#app-7'
-})
-
-
-
-
-
+    el:'#app',
+    data:{
+        user:{
+            userid:'user123',
+            name:'Jane Vue',
+            email:'user123@email.com'
+        },
+        users:[
+            {password:150303},
+            {password:250303},
+            {password:350303}
+        ]
+    }
+});
