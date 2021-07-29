@@ -1,13 +1,25 @@
+Vue.component('add',{
+    template:'<button v-on:click="add">{{count}}</button>',
+    data(){
+        return {count:0}
+    },
+    methods:{
+        add(){
+            this.count+=1
+            this.$emit('add-total',1)
+        }
+    }
+});
+
+
 let app = new Vue({
     el:'#app',
     data:{
-     user_id:'user123',
-     user_plus:'plus',
-     user_grade:'Silver'
+        totalCount:0
     },
-    computed:{
-        user_info(){
-            return this.user_id+'('+this.user_grade+')'
+    methods:{
+        totalPlus(plus){
+            this.totalCount+=plus
         }
     }
 });

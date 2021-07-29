@@ -10,22 +10,10 @@
 
 <body>
     <div id="app">
-
-
-        <input type="radio" id="user1" value="서재열" name="same" v-model="user_id">
-        <label for="">서재열</label>
-        <input type="radio" id="user2" value="김자비" name="same" v-model="user_id">
-        <label for="">김자비</label>
-        <input type="radio" id="user3" value="서용우" name="same" v-model=" user_id">
-        <label for="">서용우</label>
-        <br>
-        <input type="radio" id="gyo1" value="골드" name="samek" v-model="user_grade">
-        <label for="">골드</label>
-        <input type="radio" id="gyo2" value="실버" name="samek" v-model="user_grade">
-        <label for="">실버</label>
-        <input type="radio" id="gyo3" value="브론즈" name="samek" v-model="user_grade">
-        <label for="">브론즈</label>
-        <p>{{ user_info }}</p>
+        <h3>{{ totalCount }}</h3>
+        <add @add-total="totalPlus"></add><br>
+        <add @add-total="totalPlus"></add><br>
+        <add @add-total="totalPlus"></add><br>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="./vue.js"></script>
