@@ -17,19 +17,22 @@
             </div>
             <div class="product-info">
                 <h1>{{ product }}</h1>
-                <p v-if="inventory>10">In Stock</p>
 
-                <p v-if="inventory>0 && inventory<=10">Almost sold out!</p>
-
-                <p v-if="inventory==10">Out of Stock</p>
                 <ul>
                     <li v-for="detail in details">{{ detail }}</li>
                 </ul>
 
                 <div v-for="variant in variants" :key="variant.variantId" class="color-box"
-                    :style="{backgroundColor:variant.variantColor}" @mouseover="updateProduct(variant.variantImage)">
+                    :style="{backgroundColor:variant.variantColor}"
+                    @mouseover="updateProduct(variant.variantImage), updateQuantity(variant.inventory)">
                     {{ variant.variantColor }}
                 </div>
+
+                <p v-if="inventory>10">In Stock</p>
+
+                <p v-if="inventory>0 && inventory<=10">Almost sold out!</p>
+
+                <p v-if="inventory==0">Out of Stock</p>
 
                 <button @click="addToCart" class="color-box">Add to Cart</button>
                 <div class="cart">

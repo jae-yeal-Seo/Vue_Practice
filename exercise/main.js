@@ -9,9 +9,9 @@ let app = new Vue({
     ],
     variants:[
         {variantId:2234, variantColor:"green",
-        variantImage:"assets\images\socks_green.jpg"},
+        variantImage:"assets\images\socks_green.jpg", inventory:12},
         {variantId:2235, variantColor:"blue",
-        variantImage:"assets\images\socks_blue.jpg"}
+        variantImage:"assets\images\socks_blue.jpg", inventory:0}
     ],
     cart:0
  },
@@ -21,6 +21,9 @@ let app = new Vue({
      },
      updateProduct(variantImage){
         this.image = variantImage
+     },
+     updateQuantity(variantQuantity){
+        this.inventory = variantQuantity
      }
  }
 });
