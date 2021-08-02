@@ -34,7 +34,8 @@
 
                 <p v-if="inventory==0">Out of Stock</p>
 
-                <button @click="addToCart" class="color-box">Add to Cart</button>
+                <button @click="addToCart" class="color-box" :disabled="!inStock" :class="{disabledButton:!inStock}">Add
+                    to Cart</button>
                 <div class="cart">
                     <p>Cart {{ cart }}</p>
                 </div>

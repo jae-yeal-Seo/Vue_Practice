@@ -4,6 +4,7 @@ let app = new Vue({
      product:'Socks',
      image:"assets\images\socks_green.jpg",
     inventory:20,
+    inStock:true,
     details:[
         "80% cotton","20% polyester","Gender-neutral"
     ],
@@ -24,6 +25,11 @@ let app = new Vue({
      },
      updateQuantity(variantQuantity){
         this.inventory = variantQuantity
+        if(variantQuantity==0){
+            this.inStock=false;
+        }
+        else
+            this.inStock=true;
      }
  }
 });
