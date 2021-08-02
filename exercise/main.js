@@ -1,7 +1,9 @@
 let app = new Vue({
  el:'#app',
  data:{
-     product:'Socks',
+     title2:"PrimiumSocks",
+     brand:"Primium Vue",
+     product:' Socks',
      image:"assets\images\socks_green.jpg",
     inventory:20,
     inStock:true,
@@ -30,6 +32,9 @@ let app = new Vue({
         }
         else
             this.inStock=true;
-     }
+     },
+    title(variantColor){
+       this.title2 = this.brand+variantColor+this.product
+    }
  }
 });
